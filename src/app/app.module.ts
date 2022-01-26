@@ -1,20 +1,42 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ClientsTableComponent } from './clients-table/clients-table.component';
+import { FormsModule } from '@angular/forms';
+import { ClientDetailsComponent } from './client-details/client-details.component';
+import { AddClientComponent } from './add-client/add-client.component';
+import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
+import { HomeComponent } from './home/home.component';
+import { EditClientsComponent } from './edit-clients/edit-clients.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    ClientsTableComponent,
+    ClientDetailsComponent,
+    AddClientComponent,
+    HomeComponent,
+    EditClientsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpInterceptorInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

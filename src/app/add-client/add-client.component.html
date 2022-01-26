@@ -1,0 +1,168 @@
+<div class="bg bg-light rounded">
+<h2 class="m-auto text-center">Aggiungi un nuovo cliente</h2><br>
+<form class="my-3">
+    <div class="form-group">
+        <label>Ragione Sociale</label>
+        <input type="text" [(ngModel)]="client.ragioneSociale" name="ragioneSociale" class="form-control"
+            placeholder="Nome">
+    </div>
+    <div class="form-group">
+        <label>Partita Iva</label>
+        <input type="text" [(ngModel)]="client.partitaIva" name="partitaIva" class="form-control"
+            placeholder="Cognome">
+    </div>
+    <div class="form-group">
+        <label>Tipo cliente</label>
+        <select [(ngModel)]="client.tipoCliente" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let item of tipoCliente" [ngValue]="item">
+                {{item}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" [(ngModel)]="client.email" name="email" class="form-control" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label>Pec</label>
+        <input type="text" [(ngModel)]="client.pec" name="pec" class="form-control" placeholder="Pec">
+    </div>
+    <div class="form-group">
+        <label>Telefono</label>
+        <input type="text" [(ngModel)]="client.telefono" name="telefono" class="form-control" placeholder="Telefono">
+    </div>
+    <div class="form-group">
+        <label>Nome Contatto</label>
+        <input type="text" [(ngModel)]="client.nomeContatto" name="nomeContatto" class="form-control"
+            placeholder="Nome contatto">
+    </div>
+    <div class="form-group">
+        <label>Cognome Contatto</label>
+        <input type="text" [(ngModel)]="client.cognomeContatto" name="cognomeContatto" class="form-control"
+            placeholder="Cognome Contatto">
+    </div>
+    <div class="form-group">
+        <label>Telefono Contatto</label>
+        <input type="text" [(ngModel)]="client.telefonoContatto" name="telefonoContatto" class="form-control"
+            placeholder="Telefono Contatto">
+    </div>
+    <div class="form-group">
+        <label>email Contatto</label>
+        <input type="text" [(ngModel)]="client.emailContatto" name="emailContatto" class="form-control"
+            placeholder="Email Contatto">
+    </div>
+    <h4><b>Indirizzo sede operativa</b></h4>
+    <b>Comune:</b>
+    <!--chiamata ajax per comuni-->
+    <div class="form-group">
+
+        <div class="form-row">
+            <div class="col">
+                <label for="formGroupExampleInput2">Via</label>
+                <input type="text" class="form-control" placeholder="Via">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Civico</label>
+                <input type="text" class="form-control" placeholder="Civico">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Cap</label>
+                <input type="text" class="form-control" placeholder="Cap">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Località</label>
+                <input type="text" class="form-control" placeholder="Località">
+            </div>
+        </div>
+
+    </div>
+    <h4><b>Indirizzo sede legale</b></h4>
+    <b>Comune:</b>
+    <!--chiamata ajax per comuni-->
+    <div class="form-group">
+
+        <div class="form-row">
+            <div class="col">
+                <label for="formGroupExampleInput2">Via</label>
+                <input type="text" class="form-control" placeholder="Via">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Civico</label>
+                <input type="text" class="form-control" placeholder="Civico">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Cap</label>
+                <input type="text" class="form-control" placeholder="Cap">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Località</label>
+                <input type="text" class="form-control" placeholder="Località">
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="website">Data Inserimento</label>
+        <input type="text" class="form-control" id="website">
+    </div>
+    <div class="form-group">
+        <label for="website">Data Ultimo Contatto</label>
+        <input type="text" class="form-control" id="website">
+    </div>
+    <div class="form-group">
+        <label for="website">Fatturato Annuale</label>
+        <input type="text" class="form-control" id="website">
+    </div>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-success form-control" (click)="addNewClient()">Aggiungi</button>
+    </div>
+</form>
+</div>
+
+<!--<form>
+    <h3>Indirizzo sede operativa</h3>
+    <div class="form-group">
+
+        <div class="form-row">
+            <div class="col">
+                <label for="formGroupExampleInput2">Via</label>
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Civico</label>
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Cap</label>
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Località</label>
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+        </div>
+
+    </div>
+</form>
+<form>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Comune</label>
+        <div class="form-row">
+            <div class="col">
+                <label for="formGroupExampleInput2">Nome comune</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.via" class="form-control"
+                    placeholder="First name">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Provincia</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.localita" class="form-control"
+                    placeholder="First name">
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-secondary btn-sm" (click)="addNewClient()">i</button>
+    </div>
+</form>-->
