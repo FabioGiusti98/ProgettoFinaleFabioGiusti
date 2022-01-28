@@ -20,14 +20,18 @@ tipoCliente : string[] = []
     this.route.params.subscribe(data=> {
      this.clientService.getClientById(data['id']).subscribe(response => this.client = response);
     })
+    this.clientService.getTipoClient().subscribe(data=> {
+      this.tipoCliente = data;
+    })
+ 
   }
 
-  /*Save() {
+  Save() {
     this.clientService.updateClient(this.client).subscribe(data=>{
-      this.client = data;
       this.router.navigate(['Clients'])
     })
 
-  }*/
+  } 
 
 }
+

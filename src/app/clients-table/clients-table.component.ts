@@ -10,6 +10,7 @@ import { ClientServiceService } from '../services/client-service.service';
 })
 export class ClientsTableComponent implements OnInit {
 client: Client []= [];
+
   constructor(
     private clientService: ClientServiceService,
     private router : Router,
@@ -25,6 +26,10 @@ client: Client []= [];
 this.router.navigate(['Clients', item.id ,'detail'])
   }
 
-  
+  removeClient(item: Client) {
+    this.clientService.removeClient(item).subscribe(data => {
+    this.client = this.client.filter(ele=> ele!== item);
+      })
+  }
 
 }

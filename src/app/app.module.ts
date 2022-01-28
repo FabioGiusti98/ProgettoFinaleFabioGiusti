@@ -12,7 +12,12 @@ import { ClientDetailsComponent } from './client-details/client-details.componen
 import { AddClientComponent } from './add-client/add-client.component';
 import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
 import { HomeComponent } from './home/home.component';
+import { FatturaTableComponent } from './fattura-table/fattura-table.component';
+import { FatturaDetailsComponent } from './fattura-details/fattura-details.component';
 import { EditClientsComponent } from './edit-clients/edit-clients.component';
+import { EditFattureComponent } from './edit-fatture/edit-fatture.component';
+import { AddFatturaComponent } from './add-fattura/add-fattura.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,11 @@ import { EditClientsComponent } from './edit-clients/edit-clients.component';
     ClientDetailsComponent,
     AddClientComponent,
     HomeComponent,
-    EditClientsComponent
+    FatturaTableComponent,
+    FatturaDetailsComponent,
+    EditClientsComponent,
+    EditFattureComponent,
+    AddFatturaComponent
   ],
   imports: [
     BrowserModule,

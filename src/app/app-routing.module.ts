@@ -5,6 +5,10 @@ import { ClientDetailsComponent } from './client-details/client-details.componen
 import { HomeComponent } from './home/home.component';
 import { ClientsTableComponent } from './clients-table/clients-table.component';
 import { EditClientsComponent } from './edit-clients/edit-clients.component';
+import { FatturaTableComponent } from './fattura-table/fattura-table.component';
+import { FatturaDetailsComponent } from './fattura-details/fattura-details.component';
+import { EditFattureComponent } from './edit-fatture/edit-fatture.component';
+import { AddFatturaComponent } from './add-fattura/add-fattura.component';
 
 const routes: Routes = [
   {
@@ -25,7 +29,17 @@ const routes: Routes = [
   {
     path: 'AddClient', 
     component: AddClientComponent
-  }
+  },
+  {path: 'Fatture',
+   component: FatturaTableComponent
+  },
+  {path: 'Fatture/:id/detail',
+   component: FatturaDetailsComponent
+  },
+  {path: 'Fatture/:id/edit',
+  component: EditFattureComponent},
+  {path: 'AddFatture', 
+  component: AddFatturaComponent}
 ];
 
 @NgModule({

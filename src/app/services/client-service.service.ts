@@ -9,9 +9,7 @@ import { ClientData } from '../interfaces/client-data';
   providedIn: 'root'
 })
 export class ClientServiceService {
-  updateClient(client: Client) {
-    throw new Error('Method not implemented.');
-  }
+
 
   //tentantID='fe_0621';
   //bearerToken='Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0MzA0MTEyNSwiZXhwIjoxNjQzOTA1MTI1fQ.okXPBLbUly1c99vo7e6LUfDGFcD708Kx1zd-m5vuSIjvtSomHRlAsIpTPslJgTFQFVA86tHRg3HuDKDg6Pklow';
@@ -31,11 +29,23 @@ createNewClient(client: Client) {
   return this.http.post<Client>(environment.base + 'api/clienti', client);
 }
 
+
 getClientById (id: number) {
   return this.http.get<Client>(environment.base + 'api/clienti/' + id)
 }
 
+
 getTipoClient() {
   return this.http.get<string[]>(environment.base + 'api/clienti/tipicliente')
+}
+
+
+updateClient(client : Client) {
+  return this.http.put<Client>(environment.base + 'api/clienti/' + client.id , client)
+}
+
+
+removeClient(client: Client) {
+  return this.http.delete(environment.base + 'api/clienti/' + client.id)
 }
 }

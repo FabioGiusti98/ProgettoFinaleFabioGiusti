@@ -1,0 +1,16 @@
+<div class="card text-dark bg-white my-3 border-primary" style="max-width: 35rem;">
+    <div class="card-header bg-dark text-white text-center"><h2>{{fattura.cliente.nomeContatto}} {{fattura.cliente.cognomeContatto}}</h2></div>
+    <div class="card-body">
+        <h5 class="card-title"><strong>P.IVA:</strong> {{fattura.cliente.partitaIva}}</h5>
+        <p class="card-text"><strong>Data di emissione:</strong> {{fattura.data}}</p>
+        <p class="card-text"><strong>Numero fattura:</strong> {{fattura.numero}}</p>
+        <p class="card-text"><strong>Anno fattura:</strong> {{fattura.anno}}</p>
+        <p class="card-text"><strong>Importo fattura:</strong> € {{fattura.importo}}</p>
+        <hr>
+        <p class="text-center">
+            Stato Fattura:<br>
+            <strong>{{fattura.stato.nome}}</strong>
+        </p>
+        <button type="button" class="btn btn-warning form-control" (click)="editFattura(fattura)">Modifica</button>
+    </div>
+</div>

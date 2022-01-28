@@ -1,18 +1,18 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-<div class="card text-white text-center bg-dark my-3 border-primary" style="max-width: 25rem;">
-    <div class="card-header">{{client.nomeContatto}} {{client.cognomeContatto}}</div>
+<div class="card text-white bg-dark my-3 border-primary" style="max-width: 25rem;">
+    <div class="card-header text-center"><h2>{{client.nomeContatto}} {{client.cognomeContatto}}</h2></div>
     <div class="card-body bg-light text-dark border-success">
-        <h5 class="card-title">Partita IVA: {{client.partitaIva}}</h5>
-        <p class="card-text">id: {{client.id}}</p>
-        <p class="card-text">RagioneSociale: {{client.ragioneSociale}}</p>
-        <p class="card-text">TipoCliente:{{client.tipoCliente}}</p>
-        <p class="card-text">Email: {{client.email}}</p>
-        <p class="card-text">Pec: {{client.pec}}</p>
-        <p class="card-text">Telefono: {{client.telefono}}</p>
-        <p class="card-text">Email Contatto:{{client.emailContatto}}</p>
-        <p class="card-text">Indirizzo Sede Operativa:</p>
+        <h5 class="card-title"><strong>P.IVA:</strong> {{client.partitaIva}}</h5>
+        <p class="card-text"><strong>Id:</strong> {{client.id}}</p>
+        <p class="card-text"><strong>Ragione Sociale:</strong> {{client.ragioneSociale}}</p>
+        <p class="card-text"><strong>Tipo cliente:</strong> {{client.tipoCliente}}</p>
+        <p class="card-text"><strong>Email:</strong> {{client.email}}</p>
+        <p class="card-text"><strong>Pec:</strong> {{client.pec}}</p>
+        <p class="card-text"><strong>Telefono:</strong> {{client.telefono}}</p>
+        <p class="card-text"><strong>Email Contatto:</strong>{{client.emailContatto}}</p>
+        <p class="card-text"><strong>Indirizzo Sede Operativa:</strong></p>
         <ul>
             <li>via: {{client.indirizzoSedeOperativa.via}}</li>
             <li>Civico: {{client.indirizzoSedeOperativa.civico}}</li>
@@ -24,7 +24,7 @@
                 <li>Provincia:{{client.indirizzoSedeOperativa.comune.provincia.nome}}</li>
             </ul>
         </ul>
-        <p class="card-text">indirizzo Sede Legale:</p>
+        <p class="card-text"><strong>Indirizzo Sede Legale:</strong></p>
         <ul>
             <li>Via: {{client.indirizzoSedeLegale.via}}</li>
             <li>Civico:{{client.indirizzoSedeLegale.civico}}</li>
@@ -36,11 +36,11 @@
                 <li>Provincia:{{client.indirizzoSedeOperativa.comune.provincia.nome}}</li>
             </ul>
         </ul>
-        <p class="card-text">Data Inserimento:{{client.dataInserimento}}</p>
-        <p class="card-text">Data Ultimo Contatto:{{client.dataUltimoContatto}}</p>
-        <p class="card-text">Fatturato Annuale:{{client.fatturatoAnnuale}}</p>
-        <button type="button" class="btn btn-primary form-control" (click)="editClient(client)">GO TO EDIT</button>
-
+        <p class="card-text"><strong>Data Inserimento:</strong> {{client.dataInserimento}}</p>
+        <p class="card-text"><strong>Data Ultimo Contatto:</strong> {{client.dataUltimoContatto}}</p>
+        <hr>
+        <p class="card-text text-center">Fatturato Annuale:<br> <strong>{{client.fatturatoAnnuale}}</strong></p>
+        <button type="button" class="btn btn-warning form-control" (click)="editClient(client)">Modifica</button>
     </div>
 </div>
         </div>

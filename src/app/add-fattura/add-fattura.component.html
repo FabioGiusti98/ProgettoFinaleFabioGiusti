@@ -1,0 +1,24 @@
+<br>
+<div class="form-group">
+    <img src="https://i.ibb.co/xjLW96R/aggfat.png" class="img-fluid rounded" >
+    </div>
+<div class="bg bg-dark rounded text-white">
+<form>
+    <div class="mb-3">
+        <label class="form-label">Numero Fattura</label>
+        <input type="text" [(ngModel)]="fattura.numero" name="numero_fattura" class="form-control" placeholder="Es: 0">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Anno Fattura</label>
+        <input type="text" [(ngModel)]="fattura.anno" name="anno_fattura" class="form-control" placeholder="Es: 2000">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Importo</label>
+        <input type="text" [(ngModel)]="fattura.importo" name="importo_fattura" class="form-control"
+            placeholder="Es: 1692.16">
+    </div>
+</form>
+</div>
+<div class="form-group">
+<button type="button" class="form-control btn btn-success" (click)="addNewFattura()">Aggiungi</button>
+</div>
