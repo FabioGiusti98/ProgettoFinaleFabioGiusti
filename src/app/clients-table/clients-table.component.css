@@ -1,0 +1,50 @@
+.bn39 {
+    background-image: linear-gradient(135deg, #ff2651, #00d9da);
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: block;
+    height: 50px;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 4px;
+    position: relative;
+    text-decoration: none;
+    width: 7em;
+    z-index: 2;
+  }
+  
+  .bn39:hover {
+    color: #fff;
+  }
+  
+  .bn39 .bn39span {
+    align-items: center;
+    background: #26272b;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background 0.5s ease;
+    width: 100%;
+  }
+  
+  .bn39:hover .bn39span {
+    background: transparent;
+  }
+
+  table {
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .btn1 {
+      background-color: #00d9da;
+      border: none;
+      font-weight: bold;
+  }
+
+  .btn2{
+      background-color: #ff2651;
+      border: none;
+      font-weight: bold;
+  }

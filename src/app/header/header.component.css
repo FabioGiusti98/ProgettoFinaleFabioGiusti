@@ -36,3 +36,15 @@
   .bn39:hover .bn39span {
     background: transparent;
   }
+
+  .zoom {
+    width: 100px;
+    height: 50px;
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .zoom:hover {
+    width: 150px;
+    height: 60px;
+  }
